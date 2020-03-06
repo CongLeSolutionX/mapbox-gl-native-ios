@@ -395,7 +395,6 @@ jobs:
     steps:
       - install-macos-dependencies
       - install-dependencies
-        - ccache: false
       - check-if-this-job-can-be-skipped
       - install-ios-packaging-dependencies
       - run:
@@ -431,7 +430,6 @@ jobs:
               fi
             fi
       - save-dependencies
-        - ccache: false
       - collect-xcode-build-logs
       - upload-xcode-build-logs
       - notify-slack-nightly-failure

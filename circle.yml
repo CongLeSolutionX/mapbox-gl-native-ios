@@ -453,7 +453,7 @@ jobs:
             scripts/notify-slack.sh
       - install-macos-dependencies
       - install-dependencies
-        - ccache: false
+          ccache: false
       - install-ios-packaging-dependencies
       - run:
           name: Trigger external deploy steps
@@ -471,7 +471,7 @@ jobs:
           name: Deploy to CocoaPods
           command: platform/ios/scripts/deploy-to-cocoapods.sh
       - save-dependencies
-        - ccache: false
+          ccache: false
       - collect-xcode-build-logs
       - upload-xcode-build-logs
       - run:

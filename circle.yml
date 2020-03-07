@@ -16,7 +16,7 @@ workflows:
       - ios-debug-xcode10
       - ios-release-template:
           name: ios-release
-      - ios-release-tag:
+      - ios-release-tag
       #- ios-release-tag:
           #filters:
           #  tags:

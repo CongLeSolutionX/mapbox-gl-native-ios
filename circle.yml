@@ -452,7 +452,7 @@ jobs:
             export SLACK_MESSAGE="<$CIRCLE_BUILD_URL|Release build for \`$CIRCLE_TAG\` started.>"
             scripts/notify-slack.sh
       - install-macos-dependencies
-      - install-dependencies
+      - install-dependencies:
           ccache: false
       - install-ios-packaging-dependencies
       - run:
@@ -470,7 +470,7 @@ jobs:
       - deploy:
           name: Deploy to CocoaPods
           command: platform/ios/scripts/deploy-to-cocoapods.sh
-      - save-dependencies
+      - save-dependencies:
           ccache: false
       - collect-xcode-build-logs
       - upload-xcode-build-logs

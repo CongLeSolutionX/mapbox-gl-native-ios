@@ -17,11 +17,11 @@ workflows:
       - ios-release-template:
           name: ios-release
       - ios-release-tag:
-          filters:
-            tags:
-              only: /ios-.*/
-            branches:
-              ignore: /.*/
+          #filters:
+          #  tags:
+          #    only: /ios-.*/
+          #  branches:
+          #    ignore: /.*/
       - macos-debug
   nightly:
     triggers:
